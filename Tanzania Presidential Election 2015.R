@@ -68,9 +68,9 @@ library(broom)
 library(sf)
 
 # Read in the map files
-TZA_Lev0 <- readRDS("../../Shapefiles/R (Spatial Polygons)/gadm36_TZA_Lev0_sp.rds")
+TZA_Lev0 <- readRDS("../../../Shapefiles/R (Spatial Polygons)/gadm36_TZA_Lev0_sp.rds")
 
-TZA_Lev1 <- readRDS("../../Shapefiles/R (Spatial Polygons)/gadm36_TZA_Lev1_sp.rds")
+TZA_Lev1 <- readRDS("../../../Shapefiles/R (Spatial Polygons)/gadm36_TZA_Lev1_sp.rds")
 
 # Convert the SpatialPolygonDataFrame to a normal data frame
 TZA_Lev0 %<>% tidy()
@@ -142,7 +142,7 @@ ggsave("Graphs/TZA_Lev1.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_2015 <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_2015 <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -230,7 +230,7 @@ ggsave("Graphs/REG_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -314,7 +314,7 @@ ggsave("Graphs/AR_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -399,7 +399,7 @@ ggsave("Graphs/DAR_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -483,7 +483,7 @@ ggsave("Graphs/DOD_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -567,7 +567,7 @@ ggsave("Graphs/GEI_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -654,7 +654,7 @@ ggsave("Graphs/IRI_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -743,7 +743,7 @@ ggsave("Graphs/KAG_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -829,7 +829,7 @@ ggsave("Graphs/KAS_PEM_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -917,7 +917,7 @@ ggsave("Graphs/KAS_UNG_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1005,7 +1005,7 @@ ggsave("Graphs/KAT_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1092,7 +1092,7 @@ ggsave("Graphs/KIG_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1180,7 +1180,7 @@ ggsave("Graphs/KIL_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1267,7 +1267,7 @@ ggsave("Graphs/KUS_PEM_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1354,7 +1354,7 @@ ggsave("Graphs/KUS_UNG_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1441,7 +1441,7 @@ ggsave("Graphs/LIN_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1528,7 +1528,7 @@ ggsave("Graphs/MAN_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1616,7 +1616,7 @@ ggsave("Graphs/MARA_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1705,7 +1705,7 @@ ggsave("Graphs/MBE_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1793,7 +1793,7 @@ ggsave("Graphs/MJI_MAG_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1881,7 +1881,7 @@ ggsave("Graphs/MOR_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1970,7 +1970,7 @@ ggsave("Graphs/MTW_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2057,7 +2057,7 @@ ggsave("Graphs/MWA_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2143,7 +2143,7 @@ ggsave("Graphs/NJO_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2230,7 +2230,7 @@ ggsave("Graphs/PWA_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2317,7 +2317,7 @@ ggsave("Graphs/RUKWA_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2404,7 +2404,7 @@ ggsave("Graphs/RUVUMA_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2491,7 +2491,7 @@ ggsave("Graphs/SHI_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2577,7 +2577,7 @@ ggsave("Graphs/SIM_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2664,7 +2664,7 @@ ggsave("Graphs/SIN_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2752,7 +2752,7 @@ ggsave("Graphs/TAB_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
-TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
 
 
 # Cleaning Data --------------------------------------------------------------------------------
