@@ -142,7 +142,11 @@ ggsave("Graphs/TZA_Lev1.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_2015 <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_2015 <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -192,7 +196,11 @@ TNZ_2015 <-  gather(TNZ_2015, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for Regions
+=======
+# Plotting a grap for ARUSHA CONSTITUENCY
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 REG_plot <- ggplot(TNZ_2015, aes(x=Total_Votes, y=Region, fill = Political_Parties)) +
   geom_col() +
   scale_fill_manual(name="Political Parties",values = Party_color) +
@@ -207,8 +215,12 @@ REG_plot <- ggplot(TNZ_2015, aes(x=Total_Votes, y=Region, fill = Political_Parti
     plot.title = element_text(color="blue", size=14, face="bold.italic"),
     axis.title.x = element_text(color="blue", size=14, face="bold"),
     axis.title.y = element_text(color="blue", size=14, face="bold")
+<<<<<<< HEAD
   ) 
 
+=======
+  )
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 # importing logo inside the map
 ggdraw() +
@@ -230,7 +242,11 @@ ggsave("Graphs/REG_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -314,7 +330,11 @@ ggsave("Graphs/AR_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -399,7 +419,11 @@ ggsave("Graphs/DAR_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -483,7 +507,11 @@ ggsave("Graphs/DOD_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -567,7 +595,11 @@ ggsave("Graphs/GEI_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -654,7 +686,11 @@ ggsave("Graphs/IRI_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -682,7 +718,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "KAGERA") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -705,14 +745,23 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for KAGERA CONSTITUENCY
 KAG_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   geom_col() +
   scale_fill_manual(name="Political Parties",values = Party_color) +
   theme(axis.text.x = element_text(angle = 90)) +
   scale_x_continuous(limits = c(0,120000)) +
   labs(title = ("United Republic of Tanzania") ,
+<<<<<<< HEAD
        subtitle = ("       Kagera Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -725,10 +774,17 @@ KAG_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(KAG_plot)
 
 
 ggsave("Graphs/KAG_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -743,7 +799,11 @@ ggsave("Graphs/KAG_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -771,7 +831,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "KASKAZINI PEMBA") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -794,6 +858,7 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for KASKAZINI PEMBA CONSTITUENCY
 KAS_PEM_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
@@ -802,6 +867,16 @@ KAS_PEM_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fi
   scale_x_continuous(limits = c(0,14000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("Kaskazini Pemba Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -814,10 +889,17 @@ KAS_PEM_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fi
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(KAS_PEM_plot)
 
 
 ggsave("Graphs/KAS_PEM_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -829,7 +911,11 @@ ggsave("Graphs/KAS_PEM_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -857,7 +943,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "KASKAZINI UNGUJA") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -880,6 +970,7 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for KASKAZINI UNGUJA CONSTITUENCY
 KAS_UNG_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
@@ -888,6 +979,16 @@ KAS_UNG_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fi
   scale_x_continuous(limits = c(0,10000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("Kaskazini Unguja Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -900,10 +1001,17 @@ KAS_UNG_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fi
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(KAS_UNG_plot)
 
 
 ggsave("Graphs/KAS_UNG_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -917,7 +1025,11 @@ ggsave("Graphs/KAS_UNG_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -945,7 +1057,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "KATAVI") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -968,6 +1084,7 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for KATAVI CONSTITUENCY
 KAT_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
@@ -976,6 +1093,16 @@ KAT_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
   scale_x_continuous(limits = c(0,54000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("       Katavi Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -988,10 +1115,17 @@ KAT_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(KAT_plot)
 
 
 ggsave("Graphs/KAT_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -1005,7 +1139,11 @@ ggsave("Graphs/KAT_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1033,7 +1171,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "KIGOMA") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -1056,6 +1198,7 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for KIGOMA CONSTITUENCY
 KIG_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
@@ -1064,6 +1207,16 @@ KIG_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
   scale_x_continuous(limits = c(0,100000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("       Kigoma Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -1076,10 +1229,17 @@ KIG_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(KIG_plot)
 
 
 ggsave("Graphs/KIG_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -1092,7 +1252,11 @@ ggsave("Graphs/KIG_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1120,7 +1284,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "KILIMANJARO") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -1143,6 +1311,7 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for KILIMANJARO CONSTITUENCY
 KIL_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
@@ -1151,6 +1320,16 @@ KIL_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
   scale_x_continuous(limits = c(0,100000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("  Kilimanjaro Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -1163,10 +1342,17 @@ KIL_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(KIL_plot)
 
 
 ggsave("Graphs/KIL_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -1180,7 +1366,11 @@ ggsave("Graphs/KIL_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1208,7 +1398,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "KUSINI PEMBA") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -1231,6 +1425,7 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for KUSINI PEMBA CONSTITUENCY
 KUS_PEM_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
@@ -1239,6 +1434,16 @@ KUS_PEM_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fi
   scale_x_continuous(limits = c(0,12000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("Kusini Pemba Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -1251,10 +1456,17 @@ KUS_PEM_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fi
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(KUS_PEM_plot)
 
 
 ggsave("Graphs/KUS_PEM_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -1267,7 +1479,11 @@ ggsave("Graphs/KUS_PEM_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1295,7 +1511,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "KUSINI UNGUJA") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -1318,6 +1538,7 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for KUSINI UNGUJA CONSTITUENCY
 KUS_UNG_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
@@ -1326,6 +1547,16 @@ KUS_UNG_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fi
   scale_x_continuous(limits = c(0,15000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("Kusini Unguja Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -1338,10 +1569,17 @@ KUS_UNG_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fi
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(KUS_UNG_plot)
 
 
 ggsave("Graphs/KUS_UNG_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -1354,7 +1592,11 @@ ggsave("Graphs/KUS_UNG_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1382,7 +1624,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "LINDI") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -1405,6 +1651,7 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for LINDI CONSTITUENCY
 LIN_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
@@ -1413,6 +1660,16 @@ LIN_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
   scale_x_continuous(limits = c(0,80000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("       Lindi Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -1425,10 +1682,17 @@ LIN_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(LIN_plot)
 
 
 ggsave("Graphs/LIN_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -1441,7 +1705,11 @@ ggsave("Graphs/LIN_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1469,7 +1737,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "MANYARA") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -1492,14 +1764,23 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for MANYARA CONSTITUENCY
 MAN_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   geom_col() +
   scale_fill_manual(name="Political Parties",values = Party_color) +
   theme(axis.text.x = element_text(angle = 90)) +
   scale_x_continuous(limits = c(0,120000)) +
   labs(title = ("United Republic of Tanzania") ,
+<<<<<<< HEAD
        subtitle = ("    Manyara Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -1512,10 +1793,17 @@ MAN_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(MAN_plot)
 
 
 ggsave("Graphs/MAN_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -1528,7 +1816,11 @@ ggsave("Graphs/MAN_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1556,7 +1848,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "MARA") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -1579,6 +1875,7 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for MARA CONSTITUENCY
 MARA_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
@@ -1587,6 +1884,16 @@ MARA_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill 
   scale_x_continuous(limits = c(0,100000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("       Mara Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -1599,10 +1906,17 @@ MARA_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill 
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(MARA_plot)
 
 
 ggsave("Graphs/MARA_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -1616,7 +1930,11 @@ ggsave("Graphs/MARA_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1644,7 +1962,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "MBEYA") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -1668,6 +1990,7 @@ Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" 
 
 
 # Plotting a grap for IRINGA CONSTITUENCY
+<<<<<<< HEAD
 MBE_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
   scale_fill_manual(name="Political Parties",values = Party_color) +
@@ -1675,6 +1998,15 @@ MBE_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
   scale_x_continuous(limits = c(0,180000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("       Mbeya Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -1687,10 +2019,17 @@ MBE_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(MBE_plot)
 
 
 ggsave("Graphs/MBE_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -1705,7 +2044,11 @@ ggsave("Graphs/MBE_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1733,7 +2076,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "MJINI MAGHARIBI") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -1756,6 +2103,7 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for MJINI MAGHARIBI CONSTITUENCY
 MJI_MAG_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
@@ -1764,6 +2112,16 @@ MJI_MAG_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fi
   scale_x_continuous(limits = c(0,20000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("Mjini Magharibi Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -1776,10 +2134,17 @@ MJI_MAG_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fi
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(MJI_MAG_plot)
 
 
 ggsave("Graphs/MJI_MAG_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -1793,7 +2158,11 @@ ggsave("Graphs/MJI_MAG_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1821,7 +2190,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "MOROGORO") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -1844,6 +2217,7 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for MOROGORO CONSTITUENCY
 MOR_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
@@ -1852,6 +2226,16 @@ MOR_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
   scale_x_continuous(limits = c(0,180000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("   Morogoro Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -1859,6 +2243,7 @@ MOR_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
     plot.title = element_text(color="blue", size=14, face="bold.italic"),
     axis.title.x = element_text(color="blue", size=14, face="bold"),
     axis.title.y = element_text(color="blue", size=14, face="bold")
+<<<<<<< HEAD
   ) +
   coord_flip()
 
@@ -1869,6 +2254,17 @@ ggdraw() +
 
 
 ggsave("Graphs/MOR_plot.jpg", device="jpg")
+=======
+  )
+
+# importing logo inside the map
+ggdraw() +
+  draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -1881,7 +2277,11 @@ ggsave("Graphs/MOR_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1909,7 +2309,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "MTWARA") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -1932,6 +2336,7 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for MTWARA CONSTITUENCY
 MTW_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
@@ -1940,6 +2345,16 @@ MTW_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
   scale_x_continuous(limits = c(0,100000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("       Mtwara Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -1952,10 +2367,17 @@ MTW_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(MTW_plot)
 
 
 ggsave("Graphs/MTW_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -1970,7 +2392,11 @@ ggsave("Graphs/MTW_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -1998,7 +2424,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "MWANZA") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -2021,6 +2451,7 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for MWANZA CONSTITUENCY
 MWA_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
@@ -2029,6 +2460,16 @@ MWA_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
   scale_x_continuous(limits = c(0,200000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("     Mwanza Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -2041,10 +2482,17 @@ MWA_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(MWA_plot)
 
 
 ggsave("Graphs/MWA_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -2057,7 +2505,11 @@ ggsave("Graphs/MWA_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2085,7 +2537,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "NJOMBE") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -2108,6 +2564,7 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for NJOMBE CONSTITUENCY
 NJO_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
@@ -2116,6 +2573,16 @@ NJO_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
   scale_x_continuous(limits = c(0,60000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("     Njombe Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -2128,10 +2595,17 @@ NJO_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(NJO_plot)
 
 
 ggsave("Graphs/NJO_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -2143,7 +2617,11 @@ ggsave("Graphs/NJO_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2171,7 +2649,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "PWANI") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -2194,6 +2676,7 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for PWANI CONSTITUENCY
 PWA_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
@@ -2202,6 +2685,16 @@ PWA_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
   scale_x_continuous(limits = c(0,100000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("       Pwani Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -2214,10 +2707,17 @@ PWA_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill =
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(PWA_plot)
 
 
 ggsave("Graphs/PWA_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -2230,7 +2730,11 @@ ggsave("Graphs/PWA_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2258,7 +2762,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "RUKWA") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -2282,6 +2790,7 @@ Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" 
 
 
 # Plotting a grap for IRINGA CONSTITUENCY
+<<<<<<< HEAD
 RUKWA_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
   scale_fill_manual(name="Political Parties",values = Party_color) +
@@ -2289,6 +2798,15 @@ RUKWA_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill
   scale_x_continuous(limits = c(0,100000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("       Rukwa Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -2301,10 +2819,17 @@ RUKWA_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(RUKWA_plot)
 
 
 ggsave("Graphs/RUKWA_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -2317,7 +2842,11 @@ ggsave("Graphs/RUKWA_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2345,7 +2874,11 @@ TNZ_ELEC[["CHADEMA"]][is.na(TNZ_ELEC[["CHADEMA"]])] <- 0
 
 
 # Finding the sum of each political party and removing some columns
+<<<<<<< HEAD
 TNZ_ELEC %<>% filter(Region == "RUVUMA") %>% 
+=======
+TNZ_ELEC %<>% filter(Region == "IRINGA") %>% 
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
   select(-`Registered Voters`, -Voters, -`Valid Voters`, -`Invalid Voters`)  %>%
   group_by(Electoral_Constituency) %>%
   summarize(ACT = sum(ACT),
@@ -2368,6 +2901,7 @@ TNZ_ELEC <-  gather(TNZ_ELEC, key = "Political_Parties",
 Party_color <- c("ACT" = "Purple", "ADC" = "Orange", "CCM" = "green", "CHADEMA" = "Blue", "CHAUMA" = "brown", "NRA" = "violet", "TLP" = "red", "UPDP" = "yellow")
 
 
+<<<<<<< HEAD
 # Plotting a grap for RUVUMA CONSTITUENCY
 RUVUMA_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
   geom_col() +
@@ -2376,6 +2910,16 @@ RUVUMA_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fil
   scale_x_continuous(limits = c(0,100000)) +
   labs(title = ("United Republic of Tanzania") ,
        subtitle = ("      Ruvuma Electoral Constituency\nPresidential Election Results in 2015"),
+=======
+# Plotting a grap for IRINGA CONSTITUENCY
+IRI_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fill = Political_Parties)) +
+  geom_col() +
+  scale_fill_manual(name="Political Parties",values = Party_color) +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_x_continuous(limits = c(0,120000)) +
+  labs(title = ("United Republic of Tanzania") ,
+       subtitle = ("       Iringa Electoral Constituency\nPresidential Election Results in 2015"),
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
        caption = ("Source: \"https://www.nec.go.tz\"\n done by: Vivian J. Goshashy"  ),
        x = ("Total Votes"),
        y = ("Electoral Constituency")) + 
@@ -2388,10 +2932,17 @@ RUVUMA_plot <- ggplot(TNZ_ELEC, aes(x=Total_Votes, y=Electoral_Constituency, fil
 # importing logo inside the map
 ggdraw() +
   draw_image("Court of Arm.png", x = -0.42, y =0.4, scale = .2) +
+<<<<<<< HEAD
   draw_plot(RUVUMA_plot)
 
 
 ggsave("Graphs/RUVUMA_plot.jpg", device="jpg")
+=======
+  draw_plot(IRI_plot)
+
+
+ggsave("Graphs/IRI_plot.jpg", device="jpg")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 
@@ -2404,7 +2955,11 @@ ggsave("Graphs/RUVUMA_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2491,7 +3046,11 @@ ggsave("Graphs/SHI_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2577,7 +3136,11 @@ ggsave("Graphs/SIM_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2664,7 +3227,11 @@ ggsave("Graphs/SIN_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
@@ -2752,7 +3319,11 @@ ggsave("Graphs/TAB_plot.jpg", device="jpg")
 rm(list=ls())
 
 # Importing File -------------------------------------------------------------------------------
+<<<<<<< HEAD
 TNZ_ELEC <- read_csv("../../NEC/tanzania-election-result-2015.csv")
+=======
+TNZ_ELEC <- read_csv("../NEC/tanzania-election-result-2015.csv")
+>>>>>>> e6ad5f8a1d9f101b3ec81f992d626d71c2dfdff5
 
 
 # Cleaning Data --------------------------------------------------------------------------------
